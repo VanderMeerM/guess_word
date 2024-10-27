@@ -43,9 +43,13 @@ arrayOfChosenWord.splice(randomIndexLetter, 1);
 
 hussledWord.map((hw, idx) => {
     document.querySelector('.blue_bg').innerHTML += 
-    `<div id='hussled_letter${idx}' class="letterbox"> ${hw.cw.toUpperCase()} </div>`;
+    `<div id=${idx} onclick="getIDX(${idx})" class="letterbox"> ${hw.cw.toUpperCase()} </div>`;
 
 })
+
+function getIDX(num) {
+    console.log(num);
+    }
 
 for (let i=0; i<chosenWord.length; i++) {
     document.querySelector('.green_bg').innerHTML += 
@@ -54,10 +58,6 @@ for (let i=0; i<chosenWord.length; i++) {
 
 console.log(hussledWord)
 
-document.querySelector('#hussled_letter1').addEventListener('click', () => {
-    console.log(hussledWord.findIndex());
-} 
- )
 document.write(chosenWord + '<br>')
     
 </script>
