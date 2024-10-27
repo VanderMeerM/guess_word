@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 voor 12 - Woord raden</title>
+    <script type="text/javascript" src="./12_letter_words.js"></script>
+</head>
+<body>
+
+<div id="hussledword" style="font-weight: bold;"></div>
+
+<div class="blue_bg"></div>
+<p></p>
+<div class="green_bg"></div>
+
+<script>
+    const randomIndexOrgWord = Math.round(Math.random() * originalWords.length);
+    let chosenWord = originalWords[randomIndexOrgWord];
+
+   let arrayOfChosenWord = [];
+
+    chosenWord.split('').map((cw, idx) => {
+        arrayOfChosenWord.push({idx, cw});
+    });
+
+    let arrayOfIndexes = [];
+
+    for (let i=0; i<chosenWord.length; i++) {
+        arrayOfIndexes.push(i);
+    }
+    
+    let hussledWord = [];
+
+
+for (let i=0; i < chosenWord.length; i++) {
+
+let randomIndexLetter = Math.floor(Math.random() * arrayOfChosenWord.length); 
+hussledWord.push(arrayOfChosenWord[randomIndexLetter]);
+arrayOfChosenWord.splice(randomIndexLetter, 1);
+    
+}
+
+hussledWord.map((hw, idx) => {
+    document.querySelector('.blue_bg').innerHTML += 
+    `<div id='hussled_letter${idx}' class="letterbox"> ${hw.cw.toUpperCase()} </div>`;
+
+})
+
+for (let i=0; i<chosenWord.length; i++) {
+    document.querySelector('.green_bg').innerHTML += 
+    `<div class="letterbox"> </div>`;
+}
+
+console.log(hussledWord)
+
+document.querySelector('#hussled_letter1').addEventListener('click', () => {
+    console.log(hussledWord.findIndex());
+} 
+ )
+document.write(chosenWord + '<br>')
+    
+</script>
+
+<style>
+.blue_bg, 
+.green_bg {
+    background-color: lightblue;
+    display: flex;
+    width: fit-content;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.green_bg {
+    background-color: lightgreen;
+}
+
+.letterbox {
+    width: 50px;
+    height: 60px;
+    background-color: white;
+    border: solid black 1px;
+    margin: 0 15px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+    
+</body>
+</html>
