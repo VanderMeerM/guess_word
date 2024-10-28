@@ -5,90 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2 voor 12 - Woord raden</title>
     <script type="text/javascript" src="./12_letter_words.js"></script>
+    <script defer type="text/javascript" src="./2voor12.js"></script>
+    <link rel="stylesheet" type="text/css" href="./2voor12.css" />
 </head>
+
 <body>
 
-<div id="hussledword" style="font-weight: bold;"></div>
+<div class="container">
 
-<div class="blue_bg"></div>
+<div class="word_hussled"></div>
 <p></p>
-<div class="green_bg"></div>
+<div class="word_numbers"></div>
+<p></p>
+<div class="word_solution"></div>
 
-<script>
-    const randomIndexOrgWord = Math.round(Math.random() * originalWords.length);
-    let chosenWord = originalWords[randomIndexOrgWord];
+<p></p>
+<div> Denk je het woord te weten?</div>
+<p></p>
+<input type="text" id="guessed_word">
+<button id="checkWord">Controleer</button>
+<p></p>
+<button id="reload">Nieuw woord</button>
 
-   let arrayOfChosenWord = [];
+</div>
 
-    chosenWord.split('').map((cw, idx) => {
-        arrayOfChosenWord.push({idx, cw});
-    });
+<!-- 
 
-    let arrayOfIndexes = [];
+To do: 
 
-    for (let i=0; i<chosenWord.length; i++) {
-        arrayOfIndexes.push(i);
-    }
-    
-    let hussledWord = [];
+Als woord geraden is, direct invullen
 
+timer inbouwen 
 
-for (let i=0; i < chosenWord.length; i++) {
+knop voor nieuw woord v 
 
-let randomIndexLetter = Math.floor(Math.random() * arrayOfChosenWord.length); 
-hussledWord.push(arrayOfChosenWord[randomIndexLetter]);
-arrayOfChosenWord.splice(randomIndexLetter, 1);
-    
-}
+array met woorden doornemen (geen mv, ww of vervoegingen)
 
-hussledWord.map((hw, idx) => {
-    document.querySelector('.blue_bg').innerHTML += 
-    `<div id=${idx} onclick="getIDX(${idx})" class="letterbox"> ${hw.cw.toUpperCase()} </div>`;
-
-})
-
-function getIDX(num) {
-    console.log(num);
-    }
-
-for (let i=0; i<chosenWord.length; i++) {
-    document.querySelector('.green_bg').innerHTML += 
-    `<div class="letterbox"> </div>`;
-}
-
-console.log(hussledWord)
-
-document.write(chosenWord + '<br>')
-    
-</script>
-
-<style>
-.blue_bg, 
-.green_bg {
-    background-color: lightblue;
-    display: flex;
-    width: fit-content;
-    padding: 10px;
-    margin: 0 auto;
-}
-
-.green_bg {
-    background-color: lightgreen;
-}
-
-.letterbox {
-    width: 50px;
-    height: 60px;
-    background-color: white;
-    border: solid black 1px;
-    margin: 0 15px;
-    text-align: center;
-    font-size: 30px;
-    line-height: 60px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-</style>
-
+-->
     
 </body>
 </html>

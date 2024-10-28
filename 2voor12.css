@@ -1,0 +1,33 @@
+
+.container {
+    margin-top: 25%;
+}
+
+.word_hussled,
+.word_numbers, 
+.word_solution {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.letterbox, 
+.numbers {
+    width: 50px;
+    height: 60px;
+    background-color: white;
+    border: solid black 1px;
+    margin: 0 15px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.numbers {
+    border: solid white 1px;
+    color: red;
+    height: 20px;
+    line-height: 20px;
+}

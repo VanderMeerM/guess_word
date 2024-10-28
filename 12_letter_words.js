@@ -1,6 +1,5 @@
 let originalWords = [
-    "a posteriori",
-            "a-priorische", "aalbessenjam",
+            "aalbessenjam",
             "aalbessensap",
             "aalmoezenier",
             "aalscholvers",
