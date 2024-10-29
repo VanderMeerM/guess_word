@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2 voor 12 - Woord raden</title>
-    <script type="text/javascript" src="./12_letter_words.js"></script>
-    <script defer type="text/javascript" src="./2voor12.js"></script>
+    <script type="text/javascript" src="./js/12_letter_words.js"></script>
+    <script defer type="text/javascript" src="./js/2voor12.js"></script>
     <link rel="stylesheet" type="text/css" href="./2voor12.css" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
 
 <body>
 
+<div class="bg-image"></div>
+
 <div class="container">
+
+<div class="container_time">
+
+<div id="time"></div>
+
+</div>
 
 <div class="word_hussled"></div>
 <p></p>
@@ -19,25 +28,31 @@
 <p></p>
 <div class="word_solution"></div>
 
-<p></p>
-<div> Denk je het woord te weten?</div>
-<p></p>
-<input type="text" id="guessed_word">
+<div class="input">
+
+<input type="text" id="guessed_word" placeholder="Weet je het woord? Typ hem hier in.">
 <button id="checkWord">Controleer</button>
+</div>
+
+<div id="congrats"></div>
 <p></p>
-<button id="reload">Nieuw woord</button>
+
+<button id="reload">Speel nieuwe ronde</button>
 
 </div>
+
 
 <!-- 
 
 To do: 
 
-Als woord geraden is, direct invullen
+Als woord geraden is, direct invullen v
 
 timer inbouwen 
 
 knop voor nieuw woord v 
+
+stylen (met achtergrond, kleur etc)
 
 array met woorden doornemen (geen mv, ww of vervoegingen)
 
