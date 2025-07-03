@@ -109,8 +109,6 @@ document.getElementById('reload').addEventListener('click', () => {
         }, 1000)
     
 
-console.log(chosenWord)
-
 
 
   
