@@ -66,27 +66,6 @@ for (let i=0; i< hussledWord.length; i++) {
 }
 }
 
-let guessedWord = document.getElementById('guessed_word').value;
-guessedWord = guessedWord.toLocaleLowerCase();
-
-document.getElementById('checkWord').addEventListener('click', () => {
-    if (guessedWord !='') {
-
-        console.log(guessedWord)
-
-        if (guessedWord === chosenWord) {
-
-        clearInterval(timeRuns);
-        showSolution('green', 'Gefeliciteerd! Je hebt het woord geraden!');
-                       
-        } else {
-            clearInterval(timeRuns);
-            showSolution('red', `Helaas! De oplossing was ${chosenWord}...`);
-       }
-       
-    };
-})
-
 document.getElementById('reload').addEventListener('click', () => {
     window.location.reload();
 })
@@ -112,9 +91,36 @@ document.getElementById('reload').addEventListener('click', () => {
                 showSolution('red', `Helaas! De tijd is om...het antwoord was ${chosenWord}...`);
             }
         }, 1000)
-    
 
-console.log(chosenWord)
+document.getElementById('checkWord').addEventListener('click', () => {
+     
+   eValuateWord();
+})
+
+document.getElementById('guessed_word').addEventListener('keydown', e => {
+    if (e.key === 'Enter') 
+    {
+      
+    eValuateWord();
+};
+    
+})
+    
+function eValuateWord() {
+     if (document.getElementById('guessed_word').value !='') {
+
+        if ((document.getElementById('guessed_word').value).toLowerCase() === chosenWord) {
+
+        clearInterval(timeRuns);
+        showSolution('green', 'Gefeliciteerd! Je hebt het woord geraden!');
+                       
+        } else {
+            clearInterval(timeRuns);
+            showSolution('red', `Helaas! De oplossing was ${chosenWord}...`);
+       }
+      
+    } 
+}
 
 
 

@@ -130,5 +130,8 @@ button {
 @media (max-width: 1000px) {
     .letterbox, .numbers {
         font-size: 15px;
+        margin: 0 10px;
+        height: 40px;
+        line-height: 40px;
     }
 }
