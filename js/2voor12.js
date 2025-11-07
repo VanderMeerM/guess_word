@@ -66,12 +66,10 @@ for (let i=0; i< hussledWord.length; i++) {
 }
 }
 
-let guessedWord = document.getElementById('guessed_word').toLowerCase();
-
 document.getElementById('checkWord').addEventListener('click', () => {
-    if (guessedWord.value !='') {
+    if (document.getElementById('guessed_word').value !='') {
 
-        if (guessedWord.value === chosenWord) {
+        if (document.getElementById('guessed_word').value === chosenWord) {
 
         clearInterval(timeRuns);
         showSolution('green', 'Gefeliciteerd! Je hebt het woord geraden!');
@@ -110,6 +108,8 @@ document.getElementById('reload').addEventListener('click', () => {
             }
         }, 1000)
     
+
+console.log(chosenWord)
 
 
 
