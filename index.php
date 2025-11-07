@@ -7,7 +7,7 @@
     <script type="text/javascript" src="./js/12_letter_words.js"></script>
     <script defer type="text/javascript" src="./js/2voor12.js"></script>
     <link rel="stylesheet" type="text/css" href="./2voor12.css" />
-    <link rel="icon" type="image/x-icon" href="./2voor12/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./2voor12/img/favicon.ico"> 
 </head>
 
 <body>
