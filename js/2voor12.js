@@ -67,10 +67,12 @@ for (let i=0; i< hussledWord.length; i++) {
 }
 
 let guessedWord = document.getElementById('guessed_word').value;
-guessedWord = guessedWord.toLowerCase();
+guessedWord = guessedWord.toLocaleLowerCase();
 
 document.getElementById('checkWord').addEventListener('click', () => {
     if (guessedWord !='') {
+
+        console.log(guessedWord)
 
         if (guessedWord === chosenWord) {
 
