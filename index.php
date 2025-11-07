@@ -41,16 +41,6 @@
 
 </div>
 
-
-<!-- 
-
-To do: 
-
-array met woorden doornemen (geen mv, ww of vervoegingen)
-
-puntenmindering bij letters 'kopen'
-
--->
     
 </body>
 </html>

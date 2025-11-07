@@ -65,7 +65,7 @@ body, html {
     width: 50px;
     height: 60px;
     background-color: white;
-    border: solid black 1px;
+    border: solid lightgray 1px;
     margin: 0 15px;
     text-align: center;
     font-size: 30px;
@@ -125,4 +125,10 @@ button {
     top: 100%;
     left: 0;
   }
+}
+
+@media (max-width: 1000px) {
+    .letterbox, .numbers {
+        font-size: 15px;
+    }
 }
